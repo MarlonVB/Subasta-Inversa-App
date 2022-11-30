@@ -1,18 +1,12 @@
 package com.example.subastainversaapp.activity;
 
 import android.content.Intent;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import com.example.subastainversaapp.ActivityConfigurarCli;
-import com.example.subastainversaapp.ActivityConfigurarPro;
-import com.example.subastainversaapp.ActivityServicios;
 import com.example.subastainversaapp.R;
-import com.example.subastainversaapp.activity.Activity_Provider_Home;
-
-import java.util.List;
 
 public class Activity_Provider_Home extends AppCompatActivity {
 

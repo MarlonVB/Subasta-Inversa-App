@@ -37,4 +37,5 @@ public class SearchDBHelper extends DBHelper{
         }
         return db.rawQuery(sql, selectionArgs);
     }
+
 }
