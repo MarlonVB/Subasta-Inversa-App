@@ -14,8 +14,12 @@ public class Subasta implements Serializable {
     private Date fechaFin;
     @SerializedName("estado_subasta")
     private String estadoSubasta;
-    @SerializedName("desc_subasta")
-    private String descripcionSubasta;
+    @SerializedName("titulo_subasta")
+    private String tituloSubasta;
+    @SerializedName( "hora_cierre_subasta")
+    private String horaCierreSubasta;
+    @SerializedName( "desc_subasta")
+    private String descSubasta;
     @SerializedName("img_subasta")
     private String imgSubasta;
     @SerializedName("id_cliente")
@@ -26,12 +30,14 @@ public class Subasta implements Serializable {
     public Subasta() {
     }
 
-    public Subasta(Long idSubasta, Date fechaInicio, Date fechaFin, String estadoSubasta, String descripcionSubasta, String imgSubasta, Cliente cliente, Servicio servicio) {
+    public Subasta(Long idSubasta, Date fechaInicio, Date fechaFin, String estadoSubasta, String tituloSubasta, String horaCierreSubasta, String descSubasta, String imgSubasta, Cliente cliente, Servicio servicio) {
         this.idSubasta = idSubasta;
         this.fechaInicio = fechaInicio;
         this.fechaFin = fechaFin;
         this.estadoSubasta = estadoSubasta;
-        this.descripcionSubasta = descripcionSubasta;
+        this.tituloSubasta = tituloSubasta;
+        this.horaCierreSubasta = horaCierreSubasta;
+        this.descSubasta = descSubasta;
         this.imgSubasta = imgSubasta;
         this.cliente = cliente;
         this.servicio = servicio;
@@ -69,12 +75,28 @@ public class Subasta implements Serializable {
         this.estadoSubasta = estadoSubasta;
     }
 
-    public String getDescripcionSubasta() {
-        return descripcionSubasta;
+    public String getTituloSubasta() {
+        return tituloSubasta;
     }
 
-    public void setDescripcionSubasta(String descripcionSubasta) {
-        this.descripcionSubasta = descripcionSubasta;
+    public void setTituloSubasta(String tituloSubasta) {
+        this.tituloSubasta = tituloSubasta;
+    }
+
+    public String getHoraCierreSubasta() {
+        return horaCierreSubasta;
+    }
+
+    public void setHoraCierreSubasta(String horaCierreSubasta) {
+        this.horaCierreSubasta = horaCierreSubasta;
+    }
+
+    public String getDescSubasta() {
+        return descSubasta;
+    }
+
+    public void setDescSubasta(String descSubasta) {
+        this.descSubasta = descSubasta;
     }
 
     public String getImgSubasta() {
@@ -99,5 +121,21 @@ public class Subasta implements Serializable {
 
     public void setServicio(Servicio servicio) {
         this.servicio = servicio;
+    }
+
+    @Override
+    public String toString() {
+        return "Subasta{" +
+                "idSubasta=" + idSubasta +
+                ", fechaInicio=" + fechaInicio +
+                ", fechaFin=" + fechaFin +
+                ", estadoSubasta='" + estadoSubasta + '\'' +
+                ", tituloSubasta='" + tituloSubasta + '\'' +
+                ", horaCierreSubasta='" + horaCierreSubasta + '\'' +
+                ", descSubasta='" + descSubasta + '\'' +
+                ", imgSubasta='" + imgSubasta + '\'' +
+                ", cliente=" + cliente +
+                ", servicio=" + servicio +
+                '}';
     }
 }

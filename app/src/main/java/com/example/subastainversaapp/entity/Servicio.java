@@ -8,7 +8,7 @@ public class Servicio implements Serializable {
 
     @SerializedName("id_servicio")
     private long idServicio;
-    @SerializedName("nombreServicio")
+    @SerializedName("nombre_servicio")
     private String nombreServicio;
     @SerializedName("descripcion_servicio")
     private String descripcion_servicio;
@@ -45,4 +45,14 @@ public class Servicio implements Serializable {
     public void setDescripcion_servicio(String descripcion_servicio) {
         this.descripcion_servicio = descripcion_servicio;
     }
+
+    @Override
+    public String toString() {
+        return "Servicio{" +
+                "idServicio=" + idServicio +
+                ", nombreServicio='" + nombreServicio + '\'' +
+                ", descripcion_servicio='" + descripcion_servicio + '\'' +
+                '}';
+    }
+
 }

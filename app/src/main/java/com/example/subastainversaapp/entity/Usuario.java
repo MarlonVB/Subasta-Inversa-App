@@ -45,4 +45,13 @@ public class Usuario implements Serializable {
     public void setContraseniaUsuario(String contraseniaUsuario) {
         this.contraseniaUsuario = contraseniaUsuario;
     }
+
+    @Override
+    public String toString() {
+        return "Usuario{" +
+                "usuario_id=" + usuario_id +
+                ", nombreUsuario='" + nombreUsuario + '\'' +
+                ", contraseniaUsuario='" + contraseniaUsuario + '\'' +
+                '}';
+    }
 }

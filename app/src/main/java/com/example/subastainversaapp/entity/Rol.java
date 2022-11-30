@@ -33,4 +33,12 @@ public class Rol implements Serializable {
     public void setRolNombre(String rolNombre) {
         this.rolNombre = rolNombre;
     }
+
+    @Override
+    public String toString() {
+        return "Rol{" +
+                "id_rol=" + id_rol +
+                ", rolNombre='" + rolNombre + '\'' +
+                '}';
+    }
 }

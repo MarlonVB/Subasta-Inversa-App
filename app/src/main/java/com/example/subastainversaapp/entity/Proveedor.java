@@ -119,4 +119,20 @@ public class Proveedor implements Serializable {
     public void setServicios(Servicio servicios) {
         this.servicios = servicios;
     }
+
+    @Override
+    public String toString() {
+        return "Proveedor{" +
+                "id_persona=" + id_persona +
+                ", nombre='" + nombre + '\'' +
+                ", apellido='" + apellido + '\'' +
+                ", email='" + email + '\'' +
+                ", telefono='" + telefono + '\'' +
+                ", direccion='" + direccion + '\'' +
+                ", anios_experiencia='" + anios_experiencia + '\'' +
+                ", usuario=" + usuario +
+                ", servicios=" + servicios +
+                '}';
+    }
+
 }

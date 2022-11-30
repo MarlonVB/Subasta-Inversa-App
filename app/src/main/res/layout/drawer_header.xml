@@ -6,7 +6,7 @@
                                                    android:layout_height="match_parent">
     <TextView
             android:id="@+id/textView"
-            android:text="Nombre Usuario"
+            android:text="@string/app_name"
             android:layout_width="match_parent"
             android:layout_height="130dp"
             android:padding="20dp"

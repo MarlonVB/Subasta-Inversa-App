@@ -7,14 +7,14 @@ import retrofit2.http.*;
 import java.util.List;
 
 public interface ServiceCliente {
-    @POST("/cliente/crear")
+    @POST("/auth/cliente/crear")
     Call<Cliente> createCliente(@Body Cliente cliente);
-    @GET("/cliente/listar")
+    @GET("/auth/cliente/listar")
     Call<List<Cliente>> listCliente();
-    @GET("/cliente/listar_filtro/{filtro}")
-    Call<List<Cliente>> listCliente(@Path("filtro") String filtro);
-    @PUT("/clienet/editar/{idCliente}")
+    @GET("/auth/cliente/listar_filtro/{filtro}")
+    Call<List<Cliente>> list_filtroCliente(@Path("filtro") String filtro);
+    @PUT("/auth/cliente/editar/{idCliente}")
     Call<Cliente> editCliente(@Path("idCliente") Long id, @Body Cliente cliente);
-    @DELETE("/cliente/eliminar/{idCliente}")
+    @DELETE("/auth/cliente/eliminar/{idCliente}")
     Call<Cliente> deleteCliente(@Path("idCliente") Long id);
 }
