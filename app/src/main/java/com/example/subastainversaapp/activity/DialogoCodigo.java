@@ -1,15 +1,11 @@
 package com.example.subastainversaapp.activity;
 
 import android.app.Dialog;
-import android.view.LayoutInflater;
-import android.view.View;
+import android.os.Bundle;
 import android.widget.Button;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AlertDialog;
-import android.os.Bundle;
 import androidx.fragment.app.DialogFragment;
-import com.example.subastainversaapp.R;
 
 public class DialogoCodigo extends DialogFragment {
 
@@ -18,11 +14,11 @@ public class DialogoCodigo extends DialogFragment {
     @NonNull
     @Override
     public Dialog onCreateDialog(@Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
-        return dialogoCodigo();
+        return null;
     }
 
-    private AlertDialog dialogoCodigo() {
-        AlertDialog.Builder builder= new AlertDialog.Builder(getActivity());
+    /*private AlertDialog dialogoCodigo() {
+        /*AlertDialog.Builder builder= new AlertDialog.Builder(getActivity());
         LayoutInflater inflater = getLayoutInflater();
         View v = inflater.inflate(R.layout.activity_dialogo_codigo, null);
         builder.setView(v);
@@ -36,5 +32,5 @@ public class DialogoCodigo extends DialogFragment {
         });
 
         return builder.create();
-    }
+    }*/
 }

@@ -1,6 +1,7 @@
 package com.example.subastainversaapp.activity.fragments.proveedor;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -53,6 +54,8 @@ public class FragmentOfertasActivas extends Fragment {
                 if(response.isSuccessful()){
                     recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
                     offers=response.body();
+                    Log.e(" Servicios","entra pero no lista");
+                    Log.i(" Servicios",response.body().toString());
                     adapterofertas= new ListOfeActivaAdapter(offers, getContext()); //Aquí la consulta ya debe realizarse a la base para poder mostrar los datos
                     recyclerView.setAdapter(adapterofertas);
                 }

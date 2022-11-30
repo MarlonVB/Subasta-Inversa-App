@@ -11,14 +11,13 @@ public class Usuario implements Serializable {
     @SerializedName("nombreUsuario")
     private String nombreUsuario;
 
-    @SerializedName("contraseniaUsuario")
+    @SerializedName("contrasenia_usuario")
     private String contraseniaUsuario;
 
     public Usuario() {
     }
 
     public Usuario( String nombreUsuario, String contraseniaUsuario) {
-
         this.nombreUsuario = nombreUsuario;
         this.contraseniaUsuario = contraseniaUsuario;
     }

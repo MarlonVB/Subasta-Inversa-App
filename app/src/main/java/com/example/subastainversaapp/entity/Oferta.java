@@ -3,23 +3,22 @@ package com.example.subastainversaapp.entity;
 import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
-import java.util.Date;
 
 public class Oferta implements Serializable{
-    @SerializedName("idOferta")
+    @SerializedName("id_oferta")
     private Long idOferta;
-    @SerializedName("percioOferta")
+    @SerializedName("percio_ferta")
     private Double percioOferta;
-    @SerializedName("fecha")
+    @SerializedName("fecha_oferta")
     private String fecha;
     @SerializedName("descripcion_oferta")
     private String descripcion_oferta;
-    @SerializedName("estado")
+    @SerializedName("estado_oferta")
     private String estado;
 
-    @SerializedName("proveedor")
+    @SerializedName("id_proveedor")
     Proveedor proveedor = new Proveedor();
-    @SerializedName("subasta")
+    @SerializedName("id_subasta")
     Subasta subasta = new Subasta();
 
     public Oferta() {
@@ -91,3 +90,4 @@ public class Oferta implements Serializable{
         this.subasta = subasta;
     }
 }
+

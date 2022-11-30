@@ -8,15 +8,21 @@
         tools:context=".ActivityRegistrarServicio">
 
     <EditText
-            android:layout_width="155dp"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:ems="10"
-            android:id="@+id/editTextNumber"
-            android:layout_marginStart="10dp" app:layout_constraintStart_toEndOf="@+id/textView15"
-            android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="30dp"
-            app:layout_constraintTop_toBottomOf="@+id/spinner" android:layout_marginBottom="67dp"
-            app:layout_constraintBottom_toTopOf="@+id/btnAceptarServicio"/>
+        android:id="@+id/editTextNumber"
+        android:layout_width="155dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="67dp"
+        android:ems="10"
+        android:inputType="number"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnAceptarServicio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView15"
+        app:layout_constraintTop_toBottomOf="@+id/spinner"
+        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
     <TextView
             android:layout_width="210dp"
             android:layout_height="33dp"
@@ -29,25 +35,36 @@
             app:layout_constraintEnd_toStartOf="@+id/editTextNumber" android:layout_marginEnd="10dp"
             android:layout_marginTop="10dp" app:layout_constraintTop_toBottomOf="@+id/textView16"
             android:layout_marginBottom="52dp" app:layout_constraintBottom_toTopOf="@+id/btnAceptarServicio"/>
+
     <Spinner
-            android:layout_width="155dp"
-            android:layout_height="36dp" android:id="@+id/spinner"
-            android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="5dp"
-            app:layout_constraintStart_toEndOf="@+id/textView16" android:layout_marginTop="36dp"
-            app:layout_constraintTop_toBottomOf="@+id/txtServicio" android:layout_marginBottom="10dp"
-            app:layout_constraintBottom_toTopOf="@+id/editTextNumber"/>
+        android:id="@+id/spinner"
+        android:layout_width="155dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView16"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:layout_constraintVertical_bias="0.178"
+        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+
     <TextView
-            android:layout_width="209dp"
-            android:layout_height="34dp"
-            android:id="@+id/textView16"
-            android:text="Categoria:"
-            android:textAlignment="center"
-            android:textSize="20sp"
-            app:fontFamily="sans-serif-condensed-medium"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
-            app:layout_constraintEnd_toStartOf="@+id/spinner" android:layout_marginEnd="5dp"
-            android:layout_marginTop="15dp" app:layout_constraintTop_toBottomOf="@+id/txtServicio"
-            android:layout_marginBottom="25dp" app:layout_constraintBottom_toTopOf="@+id/textView15"/>
+        android:id="@+id/textView16"
+        android:layout_width="209dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="25dp"
+        android:text="Categoria:"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:fontFamily="sans-serif-condensed-medium"
+        app:layout_constraintBottom_toTopOf="@+id/textView15"
+        app:layout_constraintEnd_toStartOf="@+id/spinner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
     <TextView
             android:text="REGISTRO SERVICIO PROVEEDOR"
             android:textAlignment="center"
@@ -61,38 +78,29 @@
             app:guidelineUseRtl="false" app:layout_wrapBehaviorInParent="included"
             app:layout_constraintHorizontal_bias="0.51"
             android:layout_marginBottom="13dp" app:layout_constraintBottom_toTopOf="@+id/imageView2"/>
+
     <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" app:srcCompat="@drawable/ic_launcher_foreground"
-            android:id="@+id/imageView4"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="151dp"
-            android:layout_marginEnd="152dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="80dp"
-            app:layout_constraintTop_toBottomOf="@+id/textView13" android:layout_marginBottom="20dp"
-            app:layout_constraintBottom_toTopOf="@+id/txtServicio" app:layout_constraintHorizontal_bias="0.0"/>
-    <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:ems="10"
-            android:id="@+id/txtServicio"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="49dp"
-            app:layout_constraintEnd_toStartOf="@+id/IbtnAgregar" android:layout_marginEnd="23dp"
-            android:layout_marginTop="10dp" app:layout_constraintTop_toBottomOf="@+id/imageView4"
-            android:layout_marginBottom="10dp" app:layout_constraintBottom_toTopOf="@+id/textView16"/>
-    <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" app:srcCompat="?attr/actionModePasteDrawable"
-            android:id="@+id/IbtnAgregar" android:layout_marginStart="22dp"
-            app:layout_constraintStart_toEndOf="@+id/txtServicio" android:layout_marginEnd="82dp"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="220dp"
-            app:layout_constraintTop_toBottomOf="@+id/textView13" app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="269dp" app:layout_constraintVertical_bias="0.0"/>
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="151dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="152dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13"
+        app:srcCompat="@drawable/ic_launcher_foreground" />
+
     <Button
-            android:text="@string/dialogo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/btnAceptarServicio"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="163dp"
-            android:layout_marginEnd="145dp" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="59dp"
-            android:layout_marginTop="194dp" app:layout_constraintTop_toBottomOf="@+id/txtServicio"/>
+        android:id="@+id/btnAceptarServicio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="163dp"
+        android:layout_marginEnd="145dp"
+        android:layout_marginBottom="59dp"
+        android:text="@string/dialogo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

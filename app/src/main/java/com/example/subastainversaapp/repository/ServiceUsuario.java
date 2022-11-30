@@ -6,10 +6,12 @@ import com.example.subastainversaapp.entity.Usuario;
 import retrofit2.Call;
 import retrofit2.http.*;
 
+import java.util.List;
+
 public interface ServiceUsuario {
 
     @GET("/usuario/listar")
-    Call<Usuario> listUsuario();
+    Call<List<Usuario>> listUsuario();
 
     @POST("/usuario/crear")
     Call<ResponsesClassUsuario> createUsuario(@Body Usuario responseRegisterClass);
@@ -17,4 +19,8 @@ public interface ServiceUsuario {
     Call<Cliente> deleteUsuario(@Path("idUsuario") Long id);
     @PUT("/usuario/editar/{idUsuario}")
     Call<Cliente> editUsuario(@Path("idUsuario") Long id,@Body Usuario usuario);
+    @POST("getUser")
+    Call<Usuario> getUser(@Body Usuario usuario);
+
+
 }

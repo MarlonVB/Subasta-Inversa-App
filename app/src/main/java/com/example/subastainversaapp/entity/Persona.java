@@ -1,7 +1,8 @@
 package com.example.subastainversaapp.entity;
 
-import java.io.Serializable;
 import com.google.gson.annotations.SerializedName;
+
+import java.io.Serializable;
 
 public class Persona implements Serializable {
 

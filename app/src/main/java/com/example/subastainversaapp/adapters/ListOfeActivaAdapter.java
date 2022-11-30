@@ -6,11 +6,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.TextView;
+
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.example.subastainversaapp.R;
 import com.example.subastainversaapp.entity.Oferta;
 
-import java.text.SimpleDateFormat;
 import java.util.List;
 
 public class ListOfeActivaAdapter extends RecyclerView.Adapter<ListOfeActivaAdapter.ViewHolder> {
@@ -71,13 +72,14 @@ public class ListOfeActivaAdapter extends RecyclerView.Adapter<ListOfeActivaAdap
 
             //if(item.getServicio().getIdServicio()==)
             Long nro=item.getIdOferta();
-            SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
+            System.out.println(nro+"SSSSSSSSSSSS");
+            /*SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
             String f_ini=formato.format(item.getFecha());
             numero.setText(nro+"");
             servicio.setText(item.getSubasta().getServicio().getNombreServicio());
             fc.setText(f_ini);
             double pre =item.getPercioOferta();
-            precio.setText(pre+"");
+            precio.setText(pre+"");*/
         }
 
     }

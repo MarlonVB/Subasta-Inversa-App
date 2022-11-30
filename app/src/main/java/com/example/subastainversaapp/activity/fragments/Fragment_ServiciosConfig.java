@@ -1,6 +1,7 @@
 package com.example.subastainversaapp.activity.fragments;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -37,7 +38,7 @@ public class Fragment_ServiciosConfig extends Fragment {
     @Override
     public View onCreateView(@NonNull @NotNull LayoutInflater inflater, @Nullable @org.jetbrains.annotations.Nullable ViewGroup container, @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
         View view =inflater.inflate(R.layout.fragment__servicios_config,container,false);
-        recyclerView= view.findViewById(R.id.listaServicios);
+        recyclerView= view.findViewById(R.id.listaSubastas);
         servicios= new ArrayList<>();
 
       //  cargarLista();
@@ -50,11 +51,13 @@ public class Fragment_ServiciosConfig extends Fragment {
                 .addConverterFactory(GsonConverterFactory.create()).build();
 
        // Call<List<Servicio>> call = api.listServicios();
-        Call<List<Servicio>> call = retrofit.create(ServiceServicio.class).listServicios(); //Se llama el método predefinido en la Api para listar
+        ServiceServicio api = retrofit.create(ServiceServicio.class);
+        Call<List<Servicio>> call = api.listServicios(); //Se llama el método predefinido en la Api para listar
         call.enqueue(new Callback<List<Servicio>>() {
             @Override
             public void onResponse(Call<List<Servicio>> call, Response<List<Servicio>> response) {
                 if(response.isSuccessful()){
+                    Log.e(" SUbasta Contexto",getContext().toString());
                     recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
                     servicios=response.body();
                     adapterServicios= new ListAdapterServicios(servicios, getContext()); //Aquí la consulta ya debe realizarse a la base para poder mostrar los datos

@@ -9,11 +9,11 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+import com.example.subastainversaapp.ActivityConfigurarCli;
 import com.example.subastainversaapp.R;
-import com.example.subastainversaapp.activity.fragments.Fragment_ServiciosConfig;
 import com.example.subastainversaapp.activity.fragments.proveedor.FragmentInicioProveedor;
-import com.example.subastainversaapp.activity.fragments.proveedor.FragmentOfertasActivas;
 import com.example.subastainversaapp.activity.fragments.proveedor.FragmentOfertasAceptadas;
+import com.example.subastainversaapp.activity.fragments.proveedor.FragmentOfertasActivas;
 import com.example.subastainversaapp.activity.fragments.proveedor.FragmentOfertasRechazadas;
 import com.google.android.material.navigation.NavigationView;
 import org.jetbrains.annotations.NotNull;
@@ -89,7 +89,7 @@ public class Activity_MenuProveedor extends AppCompatActivity implements Navigat
         if(item.getItemId() ==R.id.configuracion){
             fragmentManager=getSupportFragmentManager();
             fragmentTransaction=fragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.container,new Fragment_ServiciosConfig());
+            fragmentTransaction.replace(R.id.container,new ActivityConfigurarCli());
             fragmentTransaction.commit();
         }
         /*if(item.getItemId() ==R.id.log_out){

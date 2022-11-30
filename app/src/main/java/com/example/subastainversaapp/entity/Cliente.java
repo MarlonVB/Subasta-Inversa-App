@@ -18,7 +18,7 @@ public class Cliente implements Serializable {
     private String telefono;
     @SerializedName("direccion")
     private String direccion;
-    @SerializedName("usuario")
+    @SerializedName("usuario_id")
     Usuario usuario = new Usuario();
 
     public Cliente(Long id_persona, String nombre, String apellido, String email, String telefono, String direccion, Usuario usuario) {

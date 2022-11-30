@@ -17,11 +17,11 @@ public class Proveedor implements Serializable {
     private String telefono;
     @SerializedName("direccion")
     private String direccion;
-    @SerializedName("anios_experiencia")
+    @SerializedName("anios_exp")
     private String anios_experiencia;
-    @SerializedName("usuario")
+    @SerializedName("id_usuario")
     Usuario usuario = new Usuario();
-    @SerializedName("servicios")
+    @SerializedName("id_servicio")
     Servicio servicios = new Servicio();
 
     public Proveedor() {
@@ -36,6 +36,16 @@ public class Proveedor implements Serializable {
         this.anios_experiencia = anios_experiencia;
         this.usuario = usuario;
         this.servicios = servicios;
+    }
+
+    public Proveedor(Long id_persona, String nombre, String apellido, String email, String telefono, String direccion, Usuario usuario) {
+        this.id_persona = id_persona;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.email = email;
+        this.telefono = telefono;
+        this.direccion = direccion;
+        this.usuario = usuario;
     }
 
     public Long getId_persona() {

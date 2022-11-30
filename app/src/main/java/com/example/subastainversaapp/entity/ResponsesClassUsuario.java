@@ -14,6 +14,7 @@ public class ResponsesClassUsuario implements Serializable {
     @SerializedName("contraseniaUsuario")
     private String contraseniaUsuario;
 
+
     public int getUsuario_id() {
         return usuario_id;
     }

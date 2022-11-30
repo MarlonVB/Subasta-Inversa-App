@@ -10,6 +10,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import com.example.subastainversaapp.R;
+import com.example.subastainversaapp.activity.fragments.Fragment_ServiciosConfig;
 import com.google.android.material.navigation.NavigationView;
 import org.jetbrains.annotations.NotNull;
 
@@ -43,10 +44,10 @@ public class ActivityMenuCliente extends AppCompatActivity implements Navigation
         actionBarDrawerToggle.syncState();
 
         //Cargar fragment main (que se cargará después de iniciar sesión)
-        /*fragmentManager=getSupportFragmentManager();
+        fragmentManager=getSupportFragmentManager();
         fragmentTransaction=fragmentManager.beginTransaction();
-        fragmentTransaction.add(R.id.container,new MainFragment());
-        fragmentTransaction.commit();*/
+        fragmentTransaction.add(R.id.container,new Fragment_ServiciosConfig());
+        fragmentTransaction.commit();
     }
 
     @Override

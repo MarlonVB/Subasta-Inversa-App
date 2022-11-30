@@ -10,6 +10,12 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     public static List<String>messageList;
+    public static String ID_USUARIO;
+    public static String CORREO_USUARIO;
+    public static String ID_CLIENTE;
+    public static String ID_PROOVEDOR;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

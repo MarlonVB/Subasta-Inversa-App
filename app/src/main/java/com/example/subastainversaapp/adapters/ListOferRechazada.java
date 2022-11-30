@@ -69,7 +69,7 @@ public class ListOferRechazada extends RecyclerView.Adapter<ListOferRechazada.Vi
 
         void bindData(final Oferta item) {
 
-            if (item.getEstado() == "Rechazada" || item.getEstado() == "RECHAZADAS" || item.getEstado() == "R") {
+
                 Long nro = item.getIdOferta();
                 SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
                 String f_ini = formato.format(item.getFecha());
@@ -78,7 +78,7 @@ public class ListOferRechazada extends RecyclerView.Adapter<ListOferRechazada.Vi
                 fc.setText(f_ini);
                 double pre = item.getPercioOferta();
                 precio.setText(pre + "");
-            }
+
         }
     }
 }
