@@ -90,6 +90,7 @@ public class ActivityRegistrarServicio extends AppCompatActivity implements Adap
                 FragmentManager fm = getSupportFragmentManager();
                 DialogoAprovacionR dc = new DialogoAprovacionR();
                 dc.show(fm, "tagAlerta");
+                s¿
                 //finish();
             }
         });
