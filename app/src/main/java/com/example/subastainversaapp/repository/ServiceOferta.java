@@ -19,21 +19,21 @@ public interface ServiceOferta {
     @PUT("/auth/oferta/editar/{idOferta}")
     Call<Oferta> editOferta(@Path("idOferta") Long id, @Body Oferta oferta);
 
-    @DELETE("/oferta/eliminar/{idOferta}")
+    @DELETE("/auth/oferta/eliminar/{idOferta}")
     Call<Oferta> deleteSubasta(@Path("idOferta") String idOferta);
 
     @GET("/auth/oferta/listar/id/{id}")
-    Call<Oferta> listOfertaId(@Path("id") Long id);
+    Call<List<Oferta>> listOfertaId(@Path("id") Long id);
 
     @GET("/auth/oferta/listar/fecha/{fecha}")
-    Call<Oferta> listOfertaFecha(@Path("fecha") String fecha);
+    Call<List<Oferta>> listOfertaFecha(@Path("fecha") String fecha);
 
-    @GET("/oferta/listar/estado/{estado}")
-    Call<Oferta> listOfertaEstado(@Path("estado") Boolean estado);
-    @GET("/oferta/listar/proveedor/{proveedor}")
-    Call<Oferta> listOfertaProveedor(@Path("estado") Boolean estado);
+    @GET("/auth/oferta/listar/estado/{estado}")
+    Call<List<Oferta>> listOfertaEstado(@Path("estado") Boolean estado);
+    @GET("/auth/oferta/listar/proveedor/{proveedor}")
+    Call<List<Oferta>> listOfertaProveedor(@Path("proveedor") Long proveedor);
 
-    @GET("/oferta/listar/calificacion/{califiacion:.*}")
-    Call<Oferta> listOfertaCalificacion(@Path("estado") Boolean estado);
+    @GET("/auth/oferta/listar/calificacion/{califiacion:.*}")
+    Call<List<Oferta>> listOfertaCalificacion(@Path("calificacion") Double calificacion);
 }
 
